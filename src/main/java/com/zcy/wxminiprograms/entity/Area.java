@@ -2,7 +2,7 @@ package com.zcy.wxminiprograms.entity;
 
 import java.util.Date;
 
-public class Area {
+public class Area {//注释:为什么用包装类型？方便非空的校验,基本类型不能为null,数据库可能读取到null
     // 主键ID
     private Integer areaId;
     // 名称
