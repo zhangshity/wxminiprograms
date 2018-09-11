@@ -23,14 +23,14 @@
     <insert id="insertArea" useGeneratedKeys="true" keyProperty="areaId"
             keyColumn="area_id" parameterType="com.zcy.wxminiprograms.entity.Area">
       insert into tb_area(area_name,priority,create_time,last_edit_time)
-      values(#{areaName},#{priority},#{createTime},lastEditTime)
+      values(#{areaName},#{priority},#{createTime},#{lastEditTime})
     </insert>
 
     <!--更新Area信息-->
     <update id="updateArea" parameterType="com.zcy.wxminiprograms.dao.AreaDao">
         update tb_area
         <set>
-            <if test="area_name!=null">area_name=#{areaName},</if>
+            <if test="areaName!=null">area_name=#{areaName},</if>
             <if test="priority!=null">priority=#{priority},</if>
             <if test="lastEditTime!=null">last_edit_time=#{lastEditTime}</if>
         </set>
