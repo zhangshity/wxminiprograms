@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zcy.wxminiprograms.dao.AreaDao">
+
+    <!-- 查询全部Area 返回的多个Area 由mybatis 自动放入list -->
+    <select id="queryArea" resultType="com.zcy.wxminiprograms.entity.Area">
+      SELECT *
+      FROM tb_area
+      ORDER BY priority
+      desc
+    </select>
+
+    <!--根据id查询单条Area-->
+    <select id="queryAreaById" resultType="com.zcy.wxminiprograms.entity.Area">
+      SELECT *
+      FROM tb_area
+      where area_id = #{areaId}
+    </select>
+
+    <!--插入Area信息-->
+    <insert id="insertArea" useGeneratedKeys="true" keyProperty="areaId"
+            keyColumn="area_id" parameterType="com.zcy.wxminiprograms.entity.Area">
+      insert into tb_area(area_name,priority,create_time,last_edit_time)
+      values(#{areaName},#{priority},#{createTime},lastEditTime)
+    </insert>
+
+    <!--更新Area信息-->
+    <update id="updateArea" parameterType="com.zcy.wxminiprograms.dao.AreaDao">
+        update tb_area
+        <set>
+            <if test="area_name!=null">area_name=#{areaName},</if>
+            <if test="priority!=null">priority=#{priority},</if>
+            <if test="lastEditTime!=null">last_edit_time=#{lastEditTime}</if>
+        </set>
+        where area_id=#{areaId}
+    </update>
+
+    <!--根据id删除单个Area信息-->
+    <delete id="deleteArea">
+        DELETE
+        FROM tb_area
+        where area_id = #{areaId}
+    </delete>
+
+</mapper>
