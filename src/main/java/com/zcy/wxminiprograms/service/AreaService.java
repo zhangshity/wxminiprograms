@@ -16,7 +16,7 @@ public interface AreaService {
     //区域列表
     List<Area> getAreaList();
 
-    //通过id单个area
+    //通过id查询单个area
     Area getAreaById(int areaId);
 
     //插入area

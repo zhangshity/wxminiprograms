@@ -31,6 +31,7 @@ public class AreaDaoTest {
     @Test
     public void queryAreaById() {
         Area area = areaDao.queryAreaById(1);
+        System.out.println(area.getAreaName());
 //        assertNotNull(area);
         assertEquals("东苑", area.getAreaName());
     }
@@ -38,7 +39,7 @@ public class AreaDaoTest {
     @Test
     public void insertArea() {
         Area area = new Area();
-        area.setAreaName("西苑");
+        area.setAreaName("XX苑");
         area.setPriority(2);
         int result = areaDao.insertArea(area);
         assertEquals(1, result);
@@ -48,11 +49,12 @@ public class AreaDaoTest {
     public void updateArea() {
 
         Area area = new Area();
-        area.setAreaName("南苑");
-//        area.setPriority(3);
-        area.setAreaId(3);
+        area.setAreaId(5);
+        area.setAreaName("X3cc苑");
+        area.setPriority(6);
         area.setLastEditTime(new Date());
         int result = areaDao.updateArea(area);
+
         assertEquals(1, result);
 
     }
@@ -60,7 +62,7 @@ public class AreaDaoTest {
     @Test
     public void deleteArea() {
 
-        int result = areaDao.deleteArea(3);
+        int result = areaDao.deleteArea(5);
         assertEquals(1, result);
     }
 }

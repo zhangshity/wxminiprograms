@@ -1,4 +1,4 @@
-package com.zcy.wxminiprograms.web;
+package com.zcy.wxminiprograms.controller;
 
 
 import com.zcy.wxminiprograms.entity.Area;
