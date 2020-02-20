@@ -27,7 +27,7 @@
     </insert>
 
     <!--更新Area信息-->
-    <update id="updateArea" parameterType="com.zcy.wxminiprograms.dao.AreaDao">
+    <update id="updateArea" parameterType="com.zcy.wxminiprograms.entity.Area">
         update tb_area
         <set>
             <if test="areaName!=null">area_name=#{areaName},</if>

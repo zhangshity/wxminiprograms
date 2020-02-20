@@ -12,13 +12,13 @@ import java.beans.PropertyVetoException;
 @MapperScan("com.zcy.wxminiprograms.dao")//配置mybatis mapper扫描路径
 public class DataSourceConfiguration {
 
-    @Value("${spring.datasource.driver-class-name}")
+    @Value("${jdbc.driver}")
     private String jdbcDriver;
-    @Value("${spring.datasource.url}")
+    @Value("${jdbc.url}")
     private String jdbcUrl;
-    @Value("${spring.datasource.username}")
+    @Value("${jdbc.username}")
     private String jdbcUsername;
-    @Value("${spring.datasource.password}")
+    @Value("${jdbc.password}")
     private String jdbcPassword;
 
     //Spring IOC容器 管理 dataSource(注解方式)
