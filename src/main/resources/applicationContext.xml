@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 此文件与本微信小程序后端无关，纯属为了测试Spring代码 -->
+    <bean id="helloworld" class="com.zcy.wxminiprograms._hello_demo_test.bean_test.HelloWord">
+        <property name="msg" value="xml property配置"/>
+    </bean>
+</beans>
