@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+    <classPathEntry location="E:\repository\mysql\mysql-connector-java\5.1.42\mysql-connector-java-5.1.42.jar"/>
+    <context id="context1">
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.124.100:3306/test_saas"
+                        userId="eshop" password="eshop#1234db"/>
+        <!-- entity.java -->
+        <javaModelGenerator targetPackage="com.star.saas.dao.entity.auto" targetProject="saas-dao/src/main/java"/>
+        <!-- mapper.xml -->
+        <sqlMapGenerator targetPackage="mybatis.auto" targetProject="saas-dao/src/main/resources"/>
+        <!-- mapper.java -->
+        <javaClientGenerator targetPackage="com.star.saas.dao.db.auto" targetProject="saas-dao/src/main/java"
+                             type="XMLMAPPER"/>
+        <!-- bms表 -->
+        <!-- <table  tableName="bms_role" domainObjectName="BmsRoleEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+        <!-- <table  tableName="bms_role_resource" domainObjectName="BmsRoleResourceEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+        <!-- <table  tableName="bms_user" domainObjectName="BmsUserEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+        <!-- <table  tableName="bms_user_role" domainObjectName="BmsUserRoleEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> --> 
+        <!-- <table  tableName="bms_log" domainObjectName="BmsLogEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+        <!-- <table  tableName="bms_resource" domainObjectName="BmsResourceEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+        <!-- saas表 -->
+        <!-- <table  tableName="user_session" domainObjectName="UserSessionEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->  
+        <!-- <table  tableName="user" domainObjectName="UserEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> --> 
+        <!--<table  tableName="product_menu_and_brand" domainObjectName="ProductMenuAndBrandEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />--> 
+        
+        <!-- <table  tableName="product_size" domainObjectName="ProductSizeEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+        <!-- <table  tableName="product_size_value" domainObjectName="ProductSizeValueEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> --> 
+        <!-- <table  tableName="product_and_size_value" domainObjectName="ProductAndSizeValueEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+        <!--  -->
+        <!--<table  tableName="user_order" domainObjectName="UserOrderEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+        <!-- <table  tableName="order_item" domainObjectName="OrderItemEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+        <!--<table  tableName="order_log" domainObjectName="OrderLogEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />   --> 
+        <!-- <table  tableName="sku" domainObjectName="SkuEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+        <!-- <table  tableName="sku_group" domainObjectName="SkuGroupEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->  
+        <!--<table  tableName="sku_log" domainObjectName="SkuLogEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> --> 
+        <!-- <table  tableName="product_and_size" domainObjectName="ProductAndSizeEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+		<!-- <table  tableName="product_type_and_brand" domainObjectName="ProductTypeAndBrandEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- <table  tableName="receiver_address" domainObjectName="ReceiverAddressEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- <table  tableName="area" domainObjectName="AreaEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+  		<!--  <table  tableName="product_detail" domainObjectName="ProductDetailEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+    	<!-- <table  tableName="product" domainObjectName="ProductEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- <table  tableName="product_brand" domainObjectName="ProductBrandEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!--<table  tableName="product_property" domainObjectName="ProductPropertyEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+    	<!-- <table  tableName="product_property_value" domainObjectName="ProductPropertyValueEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- <table  tableName="product_and_property_value" domainObjectName="ProductAndPropertyValueEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- <table  tableName="product_type" domainObjectName="ProductTypeEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!--<table  tableName="product_menu" domainObjectName="ProductMenuEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	 <!--<table  tableName="store" domainObjectName="StoreEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- <table  tableName="order_refund" domainObjectName="OrderRefundEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->  
+    	<!-- <table  tableName="order_refund_item" domainObjectName="OrderRefundItemEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->  
+   		<!--<table  tableName="order_back" domainObjectName="OrderBackEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  --> 
+   		<!-- <table  tableName="order_back_item" domainObjectName="OrderBackItemEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+   		<!--<table  tableName="store_product" domainObjectName="StoreProductEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+   		<!--<table  tableName="order_share" domainObjectName="OrderShareEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+   		<!--<table  tableName="order_share_receiver" domainObjectName="OrderShareReceiverEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+      	<!-- <table  tableName="customer_purse" domainObjectName="CustomerPurseEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+      	<!-- <table  tableName="withdraw_apply" domainObjectName="WithdrawApplyEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+      	<!--<table  tableName="channel" domainObjectName="ChannelEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+        <!-- <table  tableName="express" domainObjectName="ExpressEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->  
+   		<!--<table  tableName="product_and_menu" domainObjectName="ProductAndMenuEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> --> 
+   		<!-- <table  tableName="image_video" domainObjectName="ImageVideoEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+   		<!-- <table  tableName="enum_type" domainObjectName="EnumTypeEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+   		<!-- 促销活动-->
+   		<!-- <table  tableName="activity" domainObjectName="ActivityEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+   		<!-- <table  tableName="activity_and_rule" domainObjectName="ActivityAndRuleEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+   		<!-- <table  tableName="activity_club" domainObjectName="ActivityClubEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+   		<!-- <table  tableName="activity_club_joiner" domainObjectName="ActivityClubJoinerEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+   		<!-- <table  tableName="activity_rule" domainObjectName="ActivityRuleEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+   		<!-- <table  tableName="activity_sku" domainObjectName="ActivitySkuEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+   		<!-- <table  tableName="activity_type" domainObjectName="ActivityTypeEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- 赠品 -->
+    	<!-- <table  tableName="product_free" domainObjectName="ProductFreeEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- <table  tableName="product_and_free" domainObjectName="ProductAndFreeEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- <table  tableName="order_product_free" domainObjectName="OrderProductFreeEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- 评价 -->
+    	<!-- <table  tableName="product_mark" domainObjectName="ProductMarkEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- <table  tableName="product_score" domainObjectName="ProductScoreEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- <table  tableName="order_mark" domainObjectName="OrderMarkEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+        <!-- saas配置-->
+        <!-- <table  tableName="saas_config" domainObjectName="SaasConfigEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- 订单发货 -->
+    	<!-- <table  tableName="send_address" domainObjectName="SendAddressEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- <table  tableName="express_month" domainObjectName="ExpressMonthEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+    	<!-- <table  tableName="express_service" domainObjectName="ExpressServiceEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+        <!-- 快递 -->
+        <!-- <table  tableName="express_price" domainObjectName="ExpressPriceEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+
+		<!-- 报表 -->
+		<!-- <table  tableName="user_visit_report" domainObjectName="UserVisitReportEntity" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
+
+    </context>
+</generatorConfiguration>
